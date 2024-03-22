@@ -1,8 +1,12 @@
 import express, { Express } from 'express';
-import { BlogServer } from './setupServer';
+import { BlogServer } from '@root/setupServer';
+import databaseConnection from '@root/setupDatabase';
 
 class Application {
   public initialize(): void {
+    //connect db
+    databaseConnection();
+
     const app: Express = express();
     const server: BlogServer = new BlogServer(app);
 

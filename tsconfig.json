@@ -18,9 +18,10 @@
     "forceConsistentCasingInFileNames": true,
     "allowSyntheticDefaultImports": true,
     "pretty": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "paths": {
+      "@root/*": ["backend/*"]
+    }
   },
-  "exclude": [
-    "node_modules" // would be the default
-  ]
+  "exclude": ["node_modules", "exe.ts"]
 }
